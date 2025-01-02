@@ -1,0 +1,43 @@
+<div class="
+            mt-{{ module.margin_top.columns.spacing }} 
+            mb-{{ module.margin_bottom.columns.spacing }}
+        ">
+    <div class="grid grid-cols-1 md:grid-cols-{{ module.images_per_row }} gap-1 list-none">
+        {% for card in module.cards %}
+            <div class="p-2 shadow border border-gray-light border-opacity-10">
+                {% set imageSrc = card.image.src %}
+                {% set heading = card.heading %}
+                {% set text = card.text %}
+                {% set cta = card.cta %}
+
+
+                {% if imageSrc %}
+                    <img src="{{ imageSrc }}" alt="{{ card.heading }}" class="border border-black">
+                {% endif %}
+
+                <div class="w-full text-{{ module.content_alignment }}">
+                    {% if heading %}
+                        <h5 class="heading--small {{ imageSrc ? 'mt-more' : '' }}">
+                            {{ heading }}
+                        </h5>
+                    {% endif %}
+
+                    {% if text %}
+                        <p class="mt-half">
+                            {{ card.text }}
+                        </p>
+                    {% endif %}
+
+                    {% if cta|length %}
+                        <div class="flex justify-{{ module.content_alignment }} mt-less text-sm">
+                            <a href="{{ cta.url.href }}" class="text--withArrow text-blue hover:underline">
+                                {{ cta.text }}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>    
+</div>
+<div class="md:grid-cols-3 md:grid-cols-4"></div>
