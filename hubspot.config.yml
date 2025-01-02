@@ -1,0 +1,36 @@
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up HubSpot CLI
+        run: |
+          curl -sS https://get.sdkman.io | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          sdk install hubspot
+
+      - name: Authenticate HubSpot CLI
+        run: |
+          echo "$HUBSPOT_ACCESS_TOKEN" > hubspot_access_token.txt
+          hs auth --token $(cat hubspot_access_token.txt)
+
+      - name: Download HubSpot Code (Optional)
+        run: |
+          hs download
+
+      - name: Upload to HubSpot (Staging or Prod)
+        run: |
+          if [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
+            echo "Deploying to production..."
+            hs upload --env prod
+          else
+            echo "Deploying to staging..."
+            hs upload --env staging
+          fi
+
+      - name: Clean up
+        run: |
+          rm hubspot_access_token.txt
