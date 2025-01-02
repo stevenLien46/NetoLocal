@@ -1,0 +1,72 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+<footer class="footer bg-navy text-gray-light font-montserrat text-sm">
+    <div class="container pt-6 pb-2">
+        <div class="flex flex-wrap lg:flex-nowrap justify-between gap-4">
+            <div class="w-full">
+                <a href="https://www.maropost.com/" class="block">
+                    [Maropost logo]
+                </a>
+                <div class="mt-1">
+                    <a href="tel:1300730300" class="flex items-center hover:text-white"> <i class="fas fa-phone-alt mr-half"></i> 1300 730 300</a>
+                </div>
+                <div class="mt-1">
+                    <ul class="flex gap-1 text-xl">
+                        <li>
+                            <a href="https://www.facebook.com/maropostcommercecloud" target="_blank" class="hover:text-white">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/maropost/" target="_blank" class="hover:text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/maropost/" target="_blank" class="hover:text-white">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/maropost" target="_blank" class="hover:text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/c/Netohq" target="_blank" class="hover:text-white">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="w-full">
+                {% set menu = menu(179049288116) %}
+                <ul class="flex flex-wrap md:flex-nowrap gap-3 md:gap-4 justify-end">
+                    {% for child in menu.children %}
+                        <li class="w-full">
+                            <div class="font-medium mb-1">
+                                {{ child.label }}
+                            </div>
+                            <ul class="flex flex-wrap tems-start gap-less md:gap-quarter">
+                                {% for grandchild in child.children %}
+                                    <li class="opacity-80 {{ loop.first ? '' : 'lg:mt-half' }} hover:text-white hover:opacity-100 w-auto md:w-full whitespace-nowrap mr-1">
+                                        <a href="{{ grandchild.url }}" class="hover:text-white">
+                                            {{ grandchild.label }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>   
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </nav>
+        </div>
+        <p class="mt-6 text-sm opacity-35 text-center">
+            © {{ year }} Maropost Australia Pty Ltd · ABN 31 646 428 159
+        </p>
+    </div>
+</footer>

@@ -1,0 +1,9 @@
+.neto-icon {
+    > span {
+        @apply block h-full;
+    }
+
+    svg {
+        @apply h-full;
+    }
+}

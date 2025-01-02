@@ -1,0 +1,10 @@
+.logo {
+    width: 7rem;
+}
+
+.bg-maropost-gradient,
+.dnd-section:first-of-type {
+    background: rgb(154,230,254);
+background: radial-gradient(circle at 50% -90%, rgba(154,230,254,1) 0%, rgba(187,253,254,1) 34%, rgba(255,255,255,1) 70%);
+
+}

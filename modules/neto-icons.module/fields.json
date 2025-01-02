@@ -1,0 +1,53 @@
+[ {
+  "id" : "3fe92faf-2583-7a5b-3fad-16d1ee8e5e52",
+  "name" : "icon",
+  "display_width" : null,
+  "label" : "Icon",
+  "required" : false,
+  "locked" : false,
+  "icon_set" : "fontawesome-5.14.0",
+  "type" : "icon",
+  "default" : { }
+}, {
+  "id" : "24f3b27b-a17b-a1a2-2053-8a254b66df0e",
+  "name" : "size",
+  "display_width" : null,
+  "label" : "Size",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "5", "Huge" ], [ "3", "Large" ], [ "2", "Medium" ], [ "1", "Small" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "1"
+}, {
+  "id" : "d2abeb2e-e143-9063-f2c7-a96328c574eb",
+  "name" : "horizontal_alignment",
+  "display_width" : null,
+  "label" : "Horizontal Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "start", "Left" ], [ "center", "Center" ], [ "end", "Right" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "start"
+}, {
+  "id" : "e722cd31-f7f1-f0df-8a09-7278c0bd21fd",
+  "name" : "color",
+  "display_width" : null,
+  "label" : "Color",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "black", "Black" ], [ "blue", "Blue" ], [ "white", "White" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "black"
+} ]

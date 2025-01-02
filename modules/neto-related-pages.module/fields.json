@@ -1,0 +1,15 @@
+[ {
+  "id" : "fab2614d-b7c6-5aab-d679-f53bfd07333c",
+  "name" : "pages",
+  "display_width" : null,
+  "label" : "Pages",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "type" : "page"
+} ]

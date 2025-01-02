@@ -1,0 +1,77 @@
+form {
+    @apply w-full max-w-xl;
+    @apply rounded-3xl;
+    @apply bg-white;
+    @apply p-2;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 1);
+
+    .hs-form-field {
+        @apply mb-1 w-full;
+    }
+
+    
+    fieldset {
+        @apply flex gap-1;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        @apply !w-full;
+        @apply border border-gray-dark border-opacity-20;
+        @apply rounded-sm;
+        @apply p-half;
+        @apply !resize-none;
+    }
+
+    label {
+        @apply font-montserrat font-medium text-sm text-gray-dark;
+    }
+    .input {
+        @apply !m-0;
+    }
+    .hs-error-msgs {
+        @apply text-sm;
+        color: red !important;
+    }
+    .hs-dependent-field {
+        @apply w-full;
+    }
+    .hs-recaptcha {
+        @apply hidden;
+    }
+
+    .hs-richtext {
+        @apply text-xs opacity-50;
+    }
+
+    .legal-consent-container label {
+        @apply block mt-1 text-black;
+    }
+
+    input[type="submit"] {
+        @apply block;
+        @apply px-4 py-1;
+        @apply mx-auto mt-2;
+        @apply font-montserrat font-medium;
+        @apply border border-black rounded-full;
+        @apply text-center;
+
+        @apply w-auto;
+
+        &:hover {
+            @apply bg-black;
+            @apply text-white;
+            @apply cursor-pointer;
+        }
+        @apply bg-blue;
+        @apply text-white;
+        @apply border-blue;
+
+        &:hover {
+            @apply bg-blue-dark;
+            @apply border-blue-dark;
+        }
+    }
+}
