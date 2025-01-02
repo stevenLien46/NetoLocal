@@ -1,0 +1,60 @@
+.btn {
+  @apply inline-block;
+  @apply px-2 py-1;
+  @apply w-full;
+  @apply font-montserrat font-medium;
+  @apply border border-black rounded-full;
+  @apply text-center whitespace-nowrap;
+
+  @apply md:w-auto;
+
+  &:hover {
+    @apply bg-black;
+    @apply text-white;
+    @apply cursor-pointer;
+  }
+
+}
+
+.btn--black {
+  @apply bg-black;
+  @apply text-white;
+  @apply border-black;
+
+  &:hover {
+    @apply bg-gray-dark;
+    @apply border-gray-dark;
+  }
+}
+
+.btn--blue {
+  @apply bg-blue;
+  @apply text-white;
+  @apply border-blue;
+
+  &:hover {
+    @apply bg-blue-dark;
+    @apply border-blue-dark;
+  }
+}
+
+.btn--white {
+  @apply bg-white;
+  @apply text-black;
+  @apply border-white;
+
+  &:hover {
+    @apply bg-blue;
+    @apply border-blue;
+    @apply text-white;
+  }
+}
+
+.text--withArrow {
+  @apply font-montserrat font-medium flex flex-nowrap;
+  &::after {
+    content: '→';
+    @apply ml-quarter;
+    @apply align-middle;
+  }
+}

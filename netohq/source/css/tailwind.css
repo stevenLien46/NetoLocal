@@ -1,0 +1,37 @@
+@import 'layout.css';
+@import 'typography.css';
+@import 'elements.css';
+@import 'modules.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  html {
+    font-size: 14px;
+
+    @screen lg {
+      font-size: 16px;
+    }
+  }
+
+  .bg-transparent {
+    background-color: transparent;
+  }
+}
+
+html.hs-inline-edit {
+  [data-neto-editable] {
+    @apply border-4 border-dotted border-opacity-50;
+    @apply p-1;
+    border-color: red;
+  }
+  [data-neto-meta] {
+    @apply block;
+  }
+}
+
+[data-neto-meta] {
+  @apply hidden;
+}

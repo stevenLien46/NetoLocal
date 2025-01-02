@@ -1,0 +1,27 @@
+
+{% if module.pages %}
+    <ul>   
+        {% for page in module.pages %}
+            {% set page = content_by_id(page) %}
+            <li class="{{ loop.first ? 'mt-more' : 'mt-1'}}">                                        
+                <a href="{{ page.absolute_url }}" class="flex hover:text-blue">
+                    <div class="w-1/4" >
+                        {##
+                        {% set imageSrc = blog.widgets.listing_image.body.src|default(false) %}
+                        ##}
+
+                        {% set imageSrc = page.featured_image %}
+                        {% if imageSrc %}
+                            <div style="background-image:url({{ imageSrc }})" class="w-full h-full bg-cover bg-center">
+                            </div>
+                        {% endif %}
+                    </div>                                        
+                    <div class="heading--xsmall w-3/4 pl-1">
+                        {{ page.name }}
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul> 
+{% endif %}
+

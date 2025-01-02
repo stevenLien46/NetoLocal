@@ -1,0 +1,10 @@
+[ {
+  "id" : "811871ed-a76a-d43f-d47c-33c5d4373df1",
+  "name" : "code",
+  "display_width" : null,
+  "label" : "Code",
+  "required" : false,
+  "locked" : false,
+  "enabled_features" : [ "source_code" ],
+  "type" : "richtext"
+} ]
